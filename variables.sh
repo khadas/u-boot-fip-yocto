@@ -29,6 +29,7 @@ declare -x BL30_SELECT=""
 declare ADVANCED_BOOTLOADER=""
 
 declare DEFCFG_FOLDER="board/amlogic/defconfigs"
+declare KHADAS_DEFCFG_FOLDER="board/khadas/defconfigs"
 declare DEFCFG_FOLDER3="configs/amlogic"
 
 # for make clean
@@ -36,6 +37,7 @@ declare BL33_PATH1="bl33/v2015"
 declare BL33_PATH2="bl33/v2019"
 declare BL33_PATH3="bl33/v2023"
 
+declare BL33_DEFCFG0="${UBOOT_FOLDER}/${UBOOT_VERSION1}/${KHADAS_DEFCFG_FOLDER}"
 declare BL33_DEFCFG1="${UBOOT_FOLDER}/${UBOOT_VERSION1}/${DEFCFG_FOLDER}"
 declare BL33_DEFCFG2="${UBOOT_FOLDER}/${UBOOT_VERSION2}/${DEFCFG_FOLDER}"
 declare BL33_DEFCFG3="${UBOOT_FOLDER}/${UBOOT_VERSION3}/${DEFCFG_FOLDER3}"

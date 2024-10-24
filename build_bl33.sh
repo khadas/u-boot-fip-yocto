@@ -5,7 +5,7 @@ function select_uboot() {
 
 	cd ${MAIN_FOLDER}
 
-	for file in `ls -d ${BL33_DEFCFG1}/* ${BL33_DEFCFG2}/* ${BL33_DEFCFG3}/*`; do
+	for file in `ls -d ${BL33_DEFCFG0}/* ${BL33_DEFCFG1}/* ${BL33_DEFCFG2}/* ${BL33_DEFCFG3}/*`; do
 		temp_file=`basename $file`
 		#echo $temp_file
 		temp_file=${temp_file%_*}
@@ -28,6 +28,8 @@ function select_uboot() {
 					bl33_path=${UBOOT_FOLDER}/${UBOOT_VERSION2}
 				elif [ "${BL33_DEFCFG3}" == "$(dirname $file)" ]; then
 					bl33_path=${UBOOT_FOLDER}/${UBOOT_VERSION3}
+				elif [ "${BL33_DEFCFG0}" == "$(dirname $file)" ]; then
+					bl33_path=${UBOOT_FOLDER}/${UBOOT_VERSION1}
 				else
 					echo "not found defconfig"
 					exit 1
